@@ -1,0 +1,15 @@
+APPLICATION = prosoft66
+APPLICATION = threads
+APPLICATION = button
+RIOTBASE ?= $(CURDIR)/../RIOT
+BOARD ?= stm32f0discovery
+USEMODULE += xtimer
+QUIET ?= 1
+
+DEVELHELP ?= 1
+
+FEATURES_REQUIRED += periph_timer
+FEATURES_REQUIRED += periph_gpio
+FEATURES_REQUIRED += periph_gpio_irq
+
+include $(RIOTBASE)/Makefile.include
